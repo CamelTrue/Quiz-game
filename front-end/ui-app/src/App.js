@@ -50,7 +50,7 @@ function App() {
             {/* Link della navbar a comparsa */}
             <div className="link-utils">
                 <a className="link-line-1" href="/test">
-                    <h2><span className="underline-custom-1"></span>chi siamo</h2>
+                    <h2><span className="underline-custom-1"></span>chi fossimo</h2>
                 </a>
                 <a className="link-line-2" href="#">
                     <h2><span className="underline-custom-2"></span>servizi</h2>
@@ -61,8 +61,26 @@ function App() {
                 <a className="link-line-4" href="#">
                     <h2><span className="underline-custom-4"></span>lavora con noi</h2>
                 </a>
-                <a className="link-line-5" href="#">
-                    <h2><span className="underline-custom-5"></span>contatti</h2>
+                <a className="link-line-6" href="#">
+                    <h2><span className="underline-custom-5"></span>contattazioni</h2>
+                </a>
+                <a className="link-line-7" href="#">
+                    <h2><span className="underline-custom-5"></span>Ciao</h2>
+                </a>
+                <a className="link-line-8" href="#">
+                    <h2><span className="underline-custom-5"></span>Nico</h2>
+                </a>
+                <a className="link-line-9" href="#">
+                    <h2><span className="underline-custom-5"></span>Funge</h2>
+                </a>
+                <a className="link-line-10" href="#">
+                    <h2><span className="underline-custom-5"></span>Tutto</h2>
+                </a>
+                <a className="link-line-11" href="#">
+                    <h2><span className="underline-custom-5"></span>Adesso?</h2>
+                </a>
+                <a className="link-line-12" href="#">
+                    <h2><span className="underline-custom-5"></span>LOL</h2>
                 </a>
             </div>
         </div>
