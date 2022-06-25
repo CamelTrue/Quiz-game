@@ -4,7 +4,7 @@ import mysql.connector
 class DBUtility: 
     
     @staticmethod
-    def getConnectionLocal():
+    def getLocalConnection():
         print("creo la connessione")
         with open("DB\DbCredential.json") as f:
          db = json.load(f) 
@@ -22,7 +22,4 @@ class DBUtility:
             print("Error reading data from MySQL table", e)
         return connessione
     
-    @staticmethod
-    def closeConnectionLocal():
-        connetion = DBUtility.getConnectionLocal().close()
         

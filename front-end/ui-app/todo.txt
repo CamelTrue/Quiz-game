@@ -1,0 +1,11 @@
+Progetto Quiz
+Requisiti
+-Backend fatto in Python + FastAPi creare le API (getAllQuestions, getQuestion(idQuestion), getAnswer(idQuestion) , getUser(username, password) , getHighScore() , getRandomQuestion()
+-Database :
+	-Utenti (username, idutente , data di registrazione, password, nome, cognome)
+	-Domande (id domanda, domanda, descrizione, difficolta)
+	-risposte (id domanda, risposta, id risposta, corretta o sbagliata)
+	-TestRisultati (id utente, score, data esecuzione test)
+	CREARE LE FOREINGKEY 
+FrontEnd : sviluppare l’app utilizzando bootstrap , reactjs e CSS . Bisogna suddivire l’applicazione in componenti crenado il componente Quiz , TopScore ed un componente User che si occupera’ di gestire la login dell’utente (Non c’e’ bisogno di gestire la registrazione dell’utente, create delle utenze fittizie test / test )
+Tutto il progetto deve essere caricato su GITHUB e dockerizzato.
