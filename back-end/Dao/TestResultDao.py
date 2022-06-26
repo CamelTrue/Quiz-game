@@ -2,7 +2,7 @@ from random import random
 import mysql.connector
 from DB.DBUtility import DBUtility
 
-class TestResult:
+class TestResultDao:
     
     @staticmethod
     def getHighScore(): 
