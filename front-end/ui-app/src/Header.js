@@ -12,9 +12,9 @@ const Header = () => {
 }
 
 const ButtonStart = () => {
-  return (
-    <button className='button-reveal'>START GAME</button>
-  )
+    return (
+        <button className='button-reveal'>START GAME</button>
+    )
 }
     
 export default Header

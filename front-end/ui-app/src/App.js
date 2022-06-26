@@ -1,12 +1,14 @@
 import './App.css';
-import Navbar from './Navbar'
 import Header from './Header'
+import InterfaceQuestion from './InterfaceQuestion';
+import React from 'react';
 
 function App() {
     return (
         <div className="App">
-            <Navbar />
+            {/* <Navbar /> */}
             <Header/>
+            <InterfaceQuestion />
         </div>
     );
 }
