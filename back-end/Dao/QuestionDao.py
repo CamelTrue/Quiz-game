@@ -2,6 +2,7 @@ from random import random
 import mysql.connector
 from DB.DBUtility import DBUtility
 import random
+from ..Model.Question import Question
 
 
 class QuestionDao:
@@ -10,15 +11,17 @@ class QuestionDao:
       def getAllQuestion(): 
        connection = DBUtility.getLocalConnection()
        lista = list()
+       questionObj = Question()
        try:
           cursore = connection.cursor()            
           cursore.execute("select * from question ") 
           records = cursore.fetchall()
           for row in records:
-                    id_question = row[0]
+                    question_id = row[0]
                     question = row[1]
-                    lista.append(f"{id_question}")
-                    lista.append(f"{question}")
+                    questionObj.question_id= question_id
+                    questionObj.question = question
+                    lista.append(f"{questionObj}")
           print(lista)
           return lista
        except mysql.connector.Error as e:
