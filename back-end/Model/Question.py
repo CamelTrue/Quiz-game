@@ -3,7 +3,7 @@ from Question import Question
 
 
 class Question(BaseModel):
-   question_id : int
+   id_questions : int
    question : str
    description : str
-   difficulty : str
+   difficulty : int

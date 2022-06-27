@@ -5,6 +5,7 @@ from User import User
 
 
 class TestResult(BaseModel):
-   userId : User.userId
+   id_user : User.id_user
    score : int
-   testDate : Data
+   date_execution_test : Data
+   score_id : int

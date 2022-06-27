@@ -3,7 +3,8 @@ from Question import Question
 
 
 class AnswerModel(BaseModel):
-   answer_id : int
+   id_answer : int
    answer : str
-   Question.question_id
+   Question.id_question
+   correct_wrong : bool
    
