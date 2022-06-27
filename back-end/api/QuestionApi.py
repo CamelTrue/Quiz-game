@@ -1,7 +1,7 @@
 from colorama import reinit
 from fastapi import FastAPI
-from ..Model.Question import Question
-from ..Dao.QuestionDao import QuestionDao
+from Model.Question import Question
+from Dao.QuestionDao import QuestionDao
 
 class QuestionApi :
  app = FastAPI()

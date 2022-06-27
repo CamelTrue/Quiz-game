@@ -1,9 +1,9 @@
 from pydantic import BaseModel
-from Question import Question
+
 
 
 class AnswerModel(BaseModel):
-   answer_id : int
+   id_answer : int
    answer : str
-   Question.question_id
+   correct_wrong : bool
    

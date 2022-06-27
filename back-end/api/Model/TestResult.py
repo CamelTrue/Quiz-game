@@ -1,10 +1,10 @@
 from h11 import Data
 from pydantic import BaseModel
-from Question import Question
-from User import User
+from . import User
 
 
 class TestResult(BaseModel):
-   userId : User.userId
+   
    score : int
-   testDate : Data
+   date_execution_test : Data
+   score_id : int
