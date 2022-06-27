@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "front-end": "^0.2.9"
+    },
+
+    "scripts": {
+        "start": "node App.js"
+    }
+}

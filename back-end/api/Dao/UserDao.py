@@ -38,10 +38,10 @@ class UserDao:
 
     @staticmethod
     def getUserByIdAndPassword(username, password):
-        connection = DBUtility.getLocalConnection()
+        connection : MySQLConnection = DBUtility.getLocalConnection()
         lista = list()
         try:
-            cursore = connection.cursor()
+            cursore : MySQLCursor= connection.cursor()
             query = f"""select u.id_user,u.first_name,u.last_name,u.registration_date
                       from users u
                       where u.username = '{username}'

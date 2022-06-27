@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-from Question import Question
 
 
 class Question(BaseModel):

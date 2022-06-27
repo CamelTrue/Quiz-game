@@ -1,20 +1,21 @@
-from random import random
 import mysql.connector
 from DB.DBUtility import DBUtility
 from mysql.connector.cursor import MySQLCursor
 from mysql.connector.connection import MySQLConnection
 
 
-class TestResultDao:
+class AnswerDao:
 
     @staticmethod
-    def getHighScore():
+    def getAnswerByQuestionId(id_question):
         connection: MySQLConnection = DBUtility.getLocalConnection()
         try:
             cursore: MySQLCursor = connection.cursor()
-            cursore.execute("select MAX(score) as max_score from result_test")
-            record = cursore.fetchone()
-            return record[0]
+            query = f""""select answer.answer 
+                          from answer a 
+                          join question q on a.id_question = {id_question}"""
+            cursore.execute(query, (id_question))
+            records = cursore.fetchall()
         except mysql.connector.Error as e:
             print("\nError reading data from MySQL table", e)
         finally:

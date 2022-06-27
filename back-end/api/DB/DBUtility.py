@@ -6,9 +6,9 @@ class DBUtility:
     @staticmethod
     def getLocalConnection():
         print("creo la connessione")
-        with open("Quiz-game/back-end/DB/DbCredential.json") as f:
+        with open("Quiz-game/back-end/api/DB/DbCredential.json") as f:
          db = json.load(f) 
-        connessione=None      
+         connessione=None      
         try:
              # Connessione a MySQL
             connessione = mysql.connector.connect(

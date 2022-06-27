@@ -19,11 +19,9 @@ class QuestionDao:
             for row in records:
                 id_question = row[0]
                 question = row[1]
-                description = row[2]
-                difficulty = row[3]
+                difficulty = row[2]
                 lista.append(id_question)
                 lista.append(question)
-                lista.append(description)
                 lista.append(difficulty)
             print(lista)
             return lista
@@ -45,8 +43,8 @@ class QuestionDao:
             for row in records:
                 id_question = row[0]
                 question = row[1]
-                lista.append(f"{id_question}")
-                lista.append(f"{question}")
+                lista.append(id_question)
+                lista.append(question)
             print(lista)
             return lista
         except mysql.connector.Error as e:
@@ -57,15 +55,15 @@ class QuestionDao:
 
     @staticmethod
     def getRandomQuestion():
-        connection = DBUtility.getLocalConnection()
+        connection : MySQLConnection = DBUtility.getLocalConnection()
         lista = list()
         try:
-            cursore = connection.cursor()
+            cursore : MySQLCursor = connection.cursor()
             cursore.execute(f"select question.question from question")
             records = cursore.fetchall()
             for row in records:
                 question = row[0]
-                lista.append(f"{question}")
+                lista.append(question)
             return random.choices(lista, k=len(lista))
         except mysql.connector.Error as e:
             print("\nError reading data from MySQL table", e)

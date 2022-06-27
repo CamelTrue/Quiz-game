@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from ..Dao.TestResultDao import TestResultDao
+from Dao.TestResultDao import TestResultDao
 
 class TestResultApi:
  app = FastAPI()

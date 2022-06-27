@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from ..Model.Question import Question 
-from ..Dao.AnswerDao import AnswerDao
+from Model.Question import Question 
+from Dao.AnswerDao import AnswerDao
 
 class AnswerApi :
  app = FastAPI()

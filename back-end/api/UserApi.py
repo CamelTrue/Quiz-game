@@ -1,11 +1,9 @@
-from webbrowser import get
+from Dao.UserDao import UserDao
 from fastapi import FastAPI
-from ..Model.User import User
-from ..Dao.UserDao import UserDao
+from Model.User import User
 
-class UserApi:
-    app = FastAPI()
+app = FastAPI()
     
-@get("/user/{username}/{password}")
+@app.get("/user/{username}/{password}")
 async def get_user(user : User):
     return UserDao.getUserByIdAndPassword(user.username,user.password)
