@@ -4,6 +4,7 @@ from DB.DBUtility import DBUtility
 import random
 from mysql.connector.cursor import MySQLCursor
 from mysql.connector.connection import MySQLConnection
+from Model.QuestionModel import QuestionModel
 
 
 class QuestionDao:
@@ -17,13 +18,8 @@ class QuestionDao:
             cursore.execute("select * from questions")
             records = cursore.fetchall()
             for row in records:
-                id_question = row[0]
-                question = row[1]
-                difficulty = row[2]
-                lista.append(id_question)
+                question = QuestionModel(id_questions = row[0],question = row[1],difficulty = row[2])
                 lista.append(question)
-                lista.append(difficulty)
-            print(lista)
             return lista
         except mysql.connector.Error as e:
             print("\nError reading data from MySQL table", e)
@@ -32,20 +28,17 @@ class QuestionDao:
                 connection.close()
 
     @staticmethod
-    def getQuestionById(id_question):
-        connection = DBUtility.getLocalConnection()
+    def getQuestionById(id_questions):
+        connection : MySQLConnection = DBUtility.getLocalConnection()
         lista = list()
         try:
-            cursore = connection.cursor()
+            cursore : MySQLCursor = connection.cursor()
             cursore.execute(
-                f"select * from questions q where q.id_question = {id_question} ")
+                f"select * from questions q where q.id_questions = {id_questions} ")
             records = cursore.fetchall()
             for row in records:
-                id_question = row[0]
-                question = row[1]
-                lista.append(id_question)
+                question = QuestionModel(id_questions = row[0],question = row[1],difficulty=row[2])
                 lista.append(question)
-            print(lista)
             return lista
         except mysql.connector.Error as e:
             print("\nError reading data from MySQL table", e)
@@ -59,12 +52,12 @@ class QuestionDao:
         lista = list()
         try:
             cursore : MySQLCursor = connection.cursor()
-            cursore.execute(f"select question.question from question")
+            cursore.execute("select q.id_questions,q.question from questions q")
             records = cursore.fetchall()
             for row in records:
-                question = row[0]
+                question = QuestionModel(id_questions = row[0],question = row[1])
                 lista.append(question)
-            return random.choices(lista, k=len(lista))
+            return random.choice(lista)
         except mysql.connector.Error as e:
             print("\nError reading data from MySQL table", e)
         finally:
