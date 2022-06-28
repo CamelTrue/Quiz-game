@@ -1,4 +1,4 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
 
 body {
     overflow-x: hidden;
-} */
+}
 
 
 
@@ -24,13 +24,13 @@ body {
 
 /* Inizio Header */
 
-/* #header {
+#header {
     position: absolute;
     bottom: 50vh;
     right: 0;
     height: 50vh;
     width: 100vw;
-    border :3px solid var(--acqua-marine);
+    border :1px solid var(--acqua-marine);
 
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@ body {
     font-size: 22px;
     font-weight: 800;
     color: #fff;
-} */
+}
 
 /* Fine Header */
 
@@ -64,16 +64,18 @@ body {
 
 /* Inizio IQ */
 
-/* #section-iq {
+#section-iq {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin-top: 55vh;
     width: 100vw;
     height: 40vh;
-    background-color: var(--background-2);
+    background-color: var(--background);
     padding-left: 3vw;
+    margin-top: 10vh;
+    border-left: 1px solid var(--acqua-marine);
+    border-bottom: 1px solid var(--acqua-marine);
 }
 
 .title-section-iq {
@@ -95,6 +97,40 @@ body {
     padding: 5px 20px;
     border-radius: 20px;
     transition: 0.4s;
-} */
+}
 
 /* Fine IQ */
+
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#email {
+    margin: 5px;
+    padding-left: 15px;
+    border: 1px solid var(--acqua-marine);
+    height: 50px;
+    background-color: var(--background-2);
+    color: #fff;
+    font-size: 20px;
+    z-index: 100;
+}
+
+#password {
+    margin: 5px;
+    padding-left: 15px;
+    border: 1px solid var(--acqua-marine);
+    height: 50px;
+    background-color: var(--background-2);
+    color: #fff;
+    font-size: 20px;
+    z-index: 100;
+}
+
+.distance-custom {
+    margin-left: 5vw;
+}
