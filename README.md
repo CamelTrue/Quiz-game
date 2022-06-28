@@ -2,7 +2,7 @@
 
 CREATE THE DATABASE
 
-Run the db.sql file in any sql editor
+Run the db.sql file inside the database folder in any sql editor
 
 INSTALL NPM AND NODEJS
 
