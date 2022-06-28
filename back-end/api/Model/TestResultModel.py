@@ -1,6 +1,6 @@
+from Model.UserModel import UserModel
 from pydantic import BaseModel
 from typing import Optional
-from Model.UserModel import UserModel
 from sqlite3 import Date
 
 class TestResultModel(BaseModel):

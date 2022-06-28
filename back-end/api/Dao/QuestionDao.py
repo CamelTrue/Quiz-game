@@ -1,11 +1,9 @@
-from random import random
-import mysql.connector
-from DB.DBUtility import DBUtility
-import random
-from mysql.connector.cursor import MySQLCursor
 from mysql.connector.connection import MySQLConnection
+from mysql.connector.cursor import MySQLCursor
 from Model.QuestionModel import QuestionModel
-
+from DB.DBUtility import DBUtility
+import mysql.connector
+import random
 
 class QuestionDao:
 
@@ -30,7 +28,6 @@ class QuestionDao:
     @staticmethod
     def getQuestionById(id_questions):
         connection : MySQLConnection = DBUtility.getLocalConnection()
-        lista = list()
         try:
             cursore : MySQLCursor = connection.cursor()
             cursore.execute(
@@ -38,8 +35,7 @@ class QuestionDao:
             records = cursore.fetchall()
             for row in records:
                 question = QuestionModel(id_questions = row[0],question = row[1],difficulty=row[2])
-                lista.append(question)
-            return lista
+            return question
         except mysql.connector.Error as e:
             print("\nError reading data from MySQL table", e)
         finally:

@@ -1,9 +1,9 @@
-from asyncio.windows_events import NULL
-import mysql.connector
-from DB.DBUtility import DBUtility
-from mysql.connector.cursor import MySQLCursor
 from mysql.connector.connection import MySQLConnection
+from mysql.connector.cursor import MySQLCursor
+from asyncio.windows_events import NULL
 from Model.UserModel import UserModel 
+from DB.DBUtility import DBUtility
+import mysql.connector
 
 
 class UserDao:
@@ -58,8 +58,7 @@ class UserDao:
                 registration_date = row[3]
                 user = UserModel(id_user= id_user,first_name=first_name
                                 ,last_name=last_name,registration_date=registration_date)
-                lista.append(user)
-            return(lista)
+            return(user)
         except mysql.connector.Error as e:
             print("\nError reading data from MySQL table", e)
         finally:

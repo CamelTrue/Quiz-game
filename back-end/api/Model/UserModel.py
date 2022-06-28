@@ -1,7 +1,6 @@
-from sqlite3 import Date
-from typing import Optional
 from pydantic import BaseModel
-
+from typing import Optional
+from sqlite3 import Date
 
 class UserModel(BaseModel):
    id_user : Optional[int]
