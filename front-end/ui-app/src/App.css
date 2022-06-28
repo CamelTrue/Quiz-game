@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
 
 body {
     overflow-x: hidden;
-}
+} */
 
 
 
@@ -24,7 +24,7 @@ body {
 
 /* Inizio Header */
 
-#header {
+/* #header {
     position: absolute;
     bottom: 50vh;
     right: 0;
@@ -54,7 +54,7 @@ body {
     font-size: 22px;
     font-weight: 800;
     color: #fff;
-}
+} */
 
 /* Fine Header */
 
@@ -64,7 +64,7 @@ body {
 
 /* Inizio IQ */
 
-#section-iq {
+/* #section-iq {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -95,6 +95,6 @@ body {
     padding: 5px 20px;
     border-radius: 20px;
     transition: 0.4s;
-}
+} */
 
 /* Fine IQ */
