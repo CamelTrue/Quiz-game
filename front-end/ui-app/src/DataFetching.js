@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 
 export default function DataFetching() {
 
@@ -9,19 +10,27 @@ export default function DataFetching() {
     }, [])
 
     const fetchData = async () => {
-        await fetch('http://jsonplaceholder.typicode.com/users')
-            .then((res) => res.json())
-            .then((data) => setUsers(data))
-            .catch((err) => {
-                console.log(err)
+        axios.get('http://127.0.0.1:8000/user')
+            .then((res) => {
+                console.log(res)
+                res.writeHead(200, {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                })
+                
+                const data = res.json()
+                return setUsers(data)
             })
         }
         console.log(users)
     return (
         <div>
-            {users.map((user) => {
-                return <p key={user.id}>{user.name}</p>
-            })}
+            {
+                users.map((user) => {
+                   <p key={user.id_user}>{user.username}</p>
+                })
+            }
+            {users}
         </div>
     );
 }
