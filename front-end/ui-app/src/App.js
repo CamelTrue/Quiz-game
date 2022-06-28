@@ -1,14 +1,15 @@
 import './App.css';
 import Header from './Header'
-import InterfaceQuestion from './InterfaceQuestion';
 import DataFetching from './DataFetching';
+import Login from './Login';
 
 function App() {
+
     return (
         <div className="App">
             <Header/>
-            <InterfaceQuestion />
             <DataFetching />
+            <Login />
         </div>
     );
 }

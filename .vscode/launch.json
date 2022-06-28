@@ -4,13 +4,20 @@
     // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "Python: Service.py",
+            "name": "Python: FastAPI",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
+            "module": "uvicorn",
+            "args": [
+                "UserApi:app",
+                "--reload"
+            ],
+            "env" : {
+                "PYTHONPATH":"${workspaceFolder}/Quiz-game/back-end/api"
+            
+            },
+            "jinja": true,
             "justMyCode": true
         }
     ]
