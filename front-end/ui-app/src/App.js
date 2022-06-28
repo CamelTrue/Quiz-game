@@ -7,9 +7,9 @@ function App() {
 
     return (
         <div className="App">
-            <Header/>
+            {/* <Header/> */}
             <DataFetching />
-            <Login />
+            {/* <Login /> */}
         </div>
     );
 }
