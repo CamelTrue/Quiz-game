@@ -1,11 +1,11 @@
-from .TestResult import TestResult
-from .Answer import AnswerModel
-from .Question import Question
-from .User import User
+from .TestResultModel import TestResultModel
+from .AnswerModel import AnswerModel
+from .QuestionModel import QuestionModel
+from .UserModel import UserModel
 
 __all__ = [
-    "TestResult",
+    "TestResultModel",
     "AnswerModel",
-    "Question",
-    "User"
+    "QuestionModel",
+    "UserModel"
 ]
