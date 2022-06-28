@@ -1,27 +1,55 @@
 import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 
 export default function DataFetching() {
 
-    const [users, setUsers] = useState([])
+    // const [users, setUsers] = useState([])
+
+    // useEffect(() => {
+    //     fetchData()
+    // }, [])
+
+    // const fetchData = async () => {
+    //     fetch('http://127.0.0.1:8000/user')
+    //         .then(res => {
+    //             console.log(res.data);
+    //             const data = res.data;
+    //             return setUsers(data);
+    //         })
+    //     }
+
+    //     console.log(users)
+
+    // return (
+    //     <div>
+    //         {users.map((user) => {
+    //             return <p key={user.id_user}>{user.username}</p>
+    //         })}
+    //     </div>
+    // );
+
+    const [data, setData] = useState('')
+
+    const fetchApi = async () => {
+        await axios.get("127.0.0.1:8000/user")
+            .then((response) => {
+                const api = response.data // response object
+                return setData(api)
+            })
+    }
+
+    console.log(data)
 
     useEffect(() => {
-        fetchData()
+        fetchApi() // actually go fetch!
     }, [])
-
-    const fetchData = async () => {
-        await fetch('http://jsonplaceholder.typicode.com/users')
-            .then((res) => res.json())
-            .then((data) => setUsers(data))
-            .catch((err) => {
-                console.log(err)
-            })
-        }
-
+    
+        // JSON.stringify() make a printable object (string) out of anything
     return (
         <div>
-            {users.map((user) => {
-                return <p key={user.id}>{user.name}</p>
-            })}
+            {
+                JSON.stringify(data)
+            } 
         </div>
-    );
+    )
 }
