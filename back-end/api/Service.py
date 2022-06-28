@@ -15,12 +15,7 @@ class Service:
        ##print(TestResultDao.getPointByIdQuestionAndIdAnswer(1,11))
        ##print(QuestionDao.getQuestionById(1))
        ##print(QuestionDao.getRandomQuestion())
-<<<<<<< HEAD
        ##print(AnswerDao.getAnswerByQuestionId(1))
        print()
-=======
-    #    print(AnswerDao.getAnswerByQuestionId(1))
-    #    print()
->>>>>>> 04ff50a58c735485232951e02ffda670d696dd52
 if __name__ == "__main__":
     Service.main()
