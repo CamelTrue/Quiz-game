@@ -4,5 +4,5 @@ from pydantic import BaseModel
 
 class QuestionModel(BaseModel):
    id_questions : Optional[int]
-   question : str
+   question : Optional[str]
    difficulty : Optional[int]
