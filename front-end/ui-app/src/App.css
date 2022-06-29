@@ -1,4 +1,4 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
 
 body {
     overflow-x: hidden;
-} */
+}
 
 
 
@@ -24,14 +24,14 @@ body {
 
 /* Inizio Header */
 
-/* #header {
+#header {
     position: absolute;
     bottom: 50vh;
     right: 0;
     height: 50vh;
     width: 100vw;
     border :1px solid var(--acqua-marine);
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +54,7 @@ body {
     font-size: 22px;
     font-weight: 800;
     color: #fff;
-} */
+}
 
 /* Fine Header */
 
@@ -64,18 +64,17 @@ body {
 
 /* Inizio IQ */
 
-/* #section-iq {
+#section-iq {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     width: 100vw;
-    height: 40vh;
+    height: 55vh;
     background-color: var(--background);
     padding-left: 3vw;
     margin-top: 10vh;
-    border-left: 1px solid var(--acqua-marine);
-    border-bottom: 1px solid var(--acqua-marine);
+    border: 1px solid var(--acqua-marine);
 }
 
 .title-section-iq {
@@ -93,16 +92,43 @@ body {
     color: #fff;
     cursor: pointer;
     margin-top: 1.5vh;
-    border: 1px solid var(--acqua-marine);
+    /* border: 1px solid var(--acqua-marine); */
     padding: 5px 20px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     transition: 0.4s;
-} */
+}
+
+.custom-container-question {
+    border: 1px solid var(--acqua-marine);
+    border-radius: 15px;
+    padding: 0 10px;
+    margin: 4px;
+}
+
+.btn-qi-custom {
+    margin-top: 20px;
+    border: 1px solid rgb(47, 50, 214);
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+
+.btn-qi-custom:hover {
+    box-shadow:
+        0 0 7px #280180,
+        0 0 18px #200166,
+        0 0 32px #1b0157,
+        0 0 48px #12003b,
+        0 0 65px #000000; 
+}
 
 /* Fine IQ */
 
 
-/* .form-input {
+.form-input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,4 +159,30 @@ body {
 
 .distance-custom {
     margin-left: 5vw;
-} */
+}
+
+
+
+.alert-custom {
+    height: 50px;
+    width: 60vw;
+    border-radius: 0 15px 15px 0;
+    background-color: #ee969e;
+    border: 1px solid #e79ca3;
+    color: #953b43;
+    position: absolute;
+    left: -20px;
+    margin-top: 5vh;
+    transform: translateX(-58vw);
+    transition: 1s;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+input[type=radio] {
+    width: 30px;
+}
