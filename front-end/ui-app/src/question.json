@@ -16,7 +16,7 @@
     {
         "answer" : [
             {
-                "first_question" : {
+                "first_answer" : {
                     "correct_one" : "Nicola",
                     "uncorrect_two" : "Giacomo",
                     "uncorrect_three" : "Michele",
@@ -25,7 +25,7 @@
                 }
             },
             {
-                "second_question" : {
+                "second_answer" : {
                     "correct_one" : "Tesan",
                     "uncorrect_two" : "Siragusa",
                     "uncorrect_three" : "Grammatico",
@@ -34,7 +34,7 @@
                 }
             },
             {
-                "third_question" : {
+                "third_answer" : {
                     "correct_one" : 25,
                     "uncorrect_two" : 30,
                     "uncorrect_three" : 12,
@@ -43,7 +43,7 @@
                 }
             },
             {
-                "fourth_question" : {
+                "fourth_answer" : {
                     "correct_one" : "San Vito al Tagliamento",
                     "uncorrect_two" : "Pordenone",
                     "uncorrect_three" : "Udine",
@@ -52,7 +52,7 @@
                 }
             },
             {
-                "fifth_question" : {
+                "fifth_answer" : {
                     "correct_one" : "San Giorgio della richinvelda",
                     "uncorrect_two" : "San Lazzaro",
                     "uncorrect_three" : "Bari",
@@ -61,7 +61,7 @@
                 }
             },
             {
-                "sixth_question" : {
+                "sixth_answer" : {
                     "correct_one" : "Lenard",
                     "uncorrect_two" : "Leonardo",
                     "uncorrect_three" : "Sirio",
@@ -70,7 +70,7 @@
                 }
             },
             {
-                "seventh_question" : {
+                "seventh_answer" : {
                     "correct_one" : "Elaina",
                     "uncorrect_two" : "Pallina",
                     "uncorrect_three" : "Batuffola",
@@ -79,7 +79,7 @@
                 }
             },
             {
-                "eighth_question" : {
+                "eighth_answer" : {
                     "correct_one" : "Roberto",
                     "uncorrect_two" : "Paolino",
                     "uncorrect_three" : "Calogero",
@@ -88,7 +88,7 @@
                 }
             },
             {
-                "ninth_question" : {
+                "ninth_answer" : {
                     "correct_one" : "Barbara",
                     "uncorrect_two" : "Selenia",
                     "uncorrect_three" : "Pierina",
@@ -97,7 +97,7 @@
                 }
             },
             {
-                "tenth_question" : {
+                "tenth_answer" : {
                     "correct_one" : "Roma",
                     "uncorrect_two" : "San Lazzaro",
                     "uncorrect_three" : "Bari",
