@@ -1,13 +1,12 @@
-from Dao.UserDao import UserDao
 from Dao.TestResultDao import TestResultDao
 from Dao.QuestionDao import QuestionDao
 from Dao.AnswerDao import AnswerDao
+from Dao.UserDao import UserDao
 
-class Service:
-    
+class Service:   
     def main():
         
-       print(UserDao.getAllUsers())
+       ##print(UserDao.getAllUsers())
        ##print(UserDao.getUserByIdAndPassword("Tommy","skasfa"))
        ##print(QuestionDao.getAllQuestion())
        ##print(TestResultDao.getHighScore())

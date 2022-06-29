@@ -1,10 +1,12 @@
-from random import random
-import mysql.connector
-from DB.DBUtility import DBUtility
-from mysql.connector.cursor import MySQLCursor
 from mysql.connector.connection import MySQLConnection
 from Model.TestResultModel import TestResultModel
+from mysql.connector.cursor import MySQLCursor
 from Model.UserModel import UserModel
+from DB.DBUtility import DBUtility
+import mysql.connector
+
+
+
 
 
 class TestResultDao:

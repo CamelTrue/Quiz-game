@@ -1,10 +1,11 @@
-from typing import Optional
-from pydantic import BaseModel
 from Model.QuestionModel import QuestionModel
+from pydantic import BaseModel
+from typing import Optional
 
 class AnswerModel(BaseModel):
-   question : Optional[QuestionModel]
    id_answer : Optional[int]
    answer : Optional[str]
    is_correct : Optional[int]
+   question : Optional[QuestionModel]
+    
    
