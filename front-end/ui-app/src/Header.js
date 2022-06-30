@@ -35,7 +35,7 @@ const ButtonStart = () => {
     const [reveal, setReveal] = useState(false)
 
     // Hook per tenere traccia dello stato dell'input
-    const [email, setEmail] = useState('')
+    const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     
 
@@ -59,24 +59,12 @@ const ButtonStart = () => {
             })
     }
 
-    console.log(users[0].id_user)
-
-    const user = [
-        users[0].id_user,
-        users[0].username,
-        users[0].password,
-    ]
-
-    console.log(user)
-
-
-
     return (
         <div>
             <div className='form-input'>
                 {/* Con onChange teniamo traccia delle modifiche fatto all'input, quali? quelle del suo valore, ovvero dove scrivo ( ringrazia target ) */}
-                <motion.input id='email' value={email} onChange={(e) => setEmail(e.target.value)} animate={{x : 170}} placeholder='Inserisci la email' />
-                <motion.input id='password' value={password} onChange={(e) => setPassword(e.target.value)} animate={{x : 170}} placeholder='Inserisci la password' />
+                <motion.input id='email' value={username} type={'text'} onChange={(e) => setUsername(e.target.value)} animate={{x : 170}} placeholder='Inserisci la email' />
+                <motion.input id='password' type={'password'} value={password} onChange={(e) => setPassword(e.target.value)} animate={{x : 170}} placeholder='Inserisci la password' />
             </div>
 
             {/* onClick chiama la funzione handle che mi aggiornerà lo stato di reveal che ora e' true */}
@@ -85,12 +73,12 @@ const ButtonStart = () => {
                 <React.Fragment>
                     {
                         // Thernary operator per la visualizzazione dell'interfaccia delle domande, altrimenti spunterà un errore
-                        user[1] === email && user[2] === password ? <InterfaceQuestion /> : <ErrorValidate />
+                        users[0].username === username && users[0].password === password ? <InterfaceQuestion /> : <ErrorValidate />
                     }
                 </React.Fragment>
             )}
         </div>
     )
 }
-    
+
 export default Header
