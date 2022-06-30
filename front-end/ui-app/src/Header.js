@@ -6,18 +6,12 @@ import React, {useEffect, useState} from 'react'
 // Libreria per la creazione di animazioni
 import {motion} from 'framer-motion'
 
-import "aos/dist/aos.css";
-import AOS from "aos";
+import Axios from 'axios'
 import ErrorValidate from './ErrorValidate';
 import user_data from './user_data.json'
 
 // Libreria non utilizzata
 const Header = () => {
-    useEffect(() => {
-        AOS.init();
-        AOS.refresh();
-    }, []);
-
     return (
         <header id='header'>
             <div className='container-title-header'>
@@ -43,17 +37,39 @@ const ButtonStart = () => {
     // Hook per tenere traccia dello stato dell'input
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
-    // Riferimento all'oggetto json user_data
-    const user = [
-        user_data[0].username,
-        user_data[0].email,
-        user_data[0].password
-    ]
+    
 
     const handleClick = () => {
         setReveal(true);
     };
+
+
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    const fetchData = async () => {
+        Axios
+            .get('http://127.0.0.1:8000/user')
+            .then((res) => {
+                const data = res.data
+                return setUsers(data)
+            })
+    }
+
+    console.log(users[0].id_user)
+
+    const user = [
+        users[0].id_user,
+        users[0].username,
+        users[0].password,
+    ]
+
+    console.log(user)
+
+
 
     return (
         <div>
