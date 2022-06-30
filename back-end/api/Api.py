@@ -9,7 +9,7 @@ app = FastAPI()
 
 #Per risolvere il problema del cors policy indico su quale path si trova il FE (Modificare la porta in base alle impostazioni locali)
 origins = [
-    "http://localhost:3001",
+    "http://localhost:3000",
 ]
 
 app.add_middleware(
