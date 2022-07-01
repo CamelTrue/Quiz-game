@@ -30,7 +30,7 @@
             "statusBarItem.remoteBackground": "#84FFFF"
         },
         "activityBar.background": "#19340D",
-        "titleBar.activeBackground": "#234912",
+        "titleBar.activeBackground": "#110000",
         "titleBar.activeForeground": "#F6FCF3"
     }
 }

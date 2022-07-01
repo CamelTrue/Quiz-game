@@ -6,7 +6,7 @@ class DBUtility:
     @staticmethod
     def getLocalConnection():
         print("creo la connessione")
-        with open("C:/Users/Nicola/Documents/Visioture/Quiz-game/back-end/api/DB/DbCredential.json") as f:
+        with open("D:/quiz_game/back-end/api/DB/DbCredential.json") as f:
          db = json.load(f) 
          connessione=None      
         try:

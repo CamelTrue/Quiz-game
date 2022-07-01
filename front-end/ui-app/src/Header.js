@@ -8,7 +8,6 @@ import {motion} from 'framer-motion'
 
 import Axios from 'axios'
 import ErrorValidate from './ErrorValidate';
-import user_data from './user_data.json'
 
 // Libreria non utilizzata
 const Header = () => {
