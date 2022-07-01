@@ -42,7 +42,7 @@ const InterfaceQuestion = () => {
 
     useEffect(() => {
         fetchDataAnswer()
-    }, [])
+    }, [quest])
 
     let a = (quest + 1)
     

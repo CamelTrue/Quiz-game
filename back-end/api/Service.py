@@ -6,7 +6,7 @@ from Dao.UserDao import UserDao
 class Service:   
     def main():
         
-       print(UserDao.getAllUsers())
+       ##print(UserDao.getAllUsers())
        ##print(UserDao.getUserByIdAndPassword("Tommy","skasfa"))
        ##print(QuestionDao.getAllQuestion())
        ##print(TestResultDao.getHighScore())
