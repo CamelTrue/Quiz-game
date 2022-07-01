@@ -186,3 +186,19 @@ body {
 input[type=radio] {
     width: 30px;
 }
+
+.color {
+    color: #fff;
+}
+
+.color:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--acqua-marine);
+}
+
+.color:hover {
+    transition: 0.4s;
+    color: var(--acqua-marine) !important;
+}

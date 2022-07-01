@@ -105,26 +105,19 @@ const InterfaceQuestion = () => {
     console.log('La variabile dell\'hook: ', answer)
     console.log('La lunghezza dell\'hook answer: ', answer.length)
 
+    const [score, setScore] = useState([])
+
     let arrTest = []
 
-    useEffect(() => {
-        scoreAnswer()
-    }, [quest])
-
     const scoreAnswer = () => {
-        if (obj.answerQuestion !== 0) {
-            obj.answerQuestion.filter((el) => {
-                arrTest.push(el)
-                if (el !== 0) {
-                    return arrTest 
-                }
-            })
+        if (obj.answerQuestion === 1) {
+            
         }
     }
 
     console.log(obj.answerQuestion)
     console.log('Questo e il punteggio di ogni domanda: ', arrTest)
-    console.log('Queste sono le risposte corrette: ', obj.answerQuestion)
+    console.log('Queste sono le risposte corrette: ', obj.answerQuestion[0])
     // console.log('Queste e il totale delle risposte: ', arrTest)
     
     return (
@@ -137,7 +130,7 @@ const InterfaceQuestion = () => {
                             // Una volta che avrò cliccato sul paragrafo, salverò nello score
                             // il paragrafo che ho cliccato e lo confronterò per vedere se la risposta
                             // e corretta tramite il dato che mi ha passato, ovver ( is_correct )
-                            <p onClick={scoreAnswer} className='text-white'>{el}</p>
+                            <p onClick={scoreAnswer} className='color text-white'>{el}</p>
                             // onClick={scoreAnswer}
                         )
                     })
