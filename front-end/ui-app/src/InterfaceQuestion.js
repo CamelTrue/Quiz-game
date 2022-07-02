@@ -42,7 +42,11 @@ const InterfaceQuestion = () => {
 
     useEffect(() => {
         fetchDataAnswer()
+<<<<<<< HEAD
     }, [])
+=======
+    }, [quest])
+>>>>>>> cb4fe31cf45f61ae34f59df278e189c9ed18b148
 
     let a = (quest + 1)
     
@@ -104,15 +108,34 @@ const InterfaceQuestion = () => {
     console.log('Voglio verificare che la variabile delle domande cambi al click: ', a)
     console.log('La variabile dell\'hook: ', answer)
     console.log('La lunghezza dell\'hook answer: ', answer.length)
+
+    const [score, setScore] = useState([])
+
+    let arrTest = []
+
+    const scoreAnswer = () => {
+        if (obj.answerQuestion === 1) {
+            
+        }
+    }
+
+    console.log(obj.answerQuestion)
+    console.log('Questo e il punteggio di ogni domanda: ', arrTest)
+    console.log('Queste sono le risposte corrette: ', obj.answerQuestion[0])
+    // console.log('Queste e il totale delle risposte: ', arrTest)
     
     return (
         <React.Fragment>
-            <p>{test[quest]}</p>
+            <p className='text-white'>{test[quest]}</p>
             <>
                 {
                     obj.otherAnswer.map((el, index) => {
                         return (
-                            <p className='text-white'>{el}</p>
+                            // Una volta che avrò cliccato sul paragrafo, salverò nello score
+                            // il paragrafo che ho cliccato e lo confronterò per vedere se la risposta
+                            // e corretta tramite il dato che mi ha passato, ovver ( is_correct )
+                            <p onClick={scoreAnswer} className='color text-white'>{el}</p>
+                            // onClick={scoreAnswer}
                         )
                     })
                 }
