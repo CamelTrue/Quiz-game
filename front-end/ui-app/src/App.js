@@ -8,9 +8,8 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <InterfaceQuestion />
             {/* <DataFetching /> */}
-            <Answer />
+            {/* <Answer /> */}
         </div>
     );
 }

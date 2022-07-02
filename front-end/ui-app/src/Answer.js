@@ -1,43 +1,63 @@
 import React, {useState, useEffect} from 'react'
 import Axios from 'axios'
 
-const Answer = (props) => {
+const Answer = ({otherAnswer, answerID, answerQuestion}) => {
     
-    const [answer, setAnswer] = useState([])
+    // const [answer, setAnswer] = useState([])
 
-    useEffect(() => {
-        fetchData()
-    }, [])
+    // useEffect(() => {
+    //     fetchData()
+    // }, [])
 
-    const [count, setCount] = useState(1)
+    // let a = 1
+    // const fetchData = async () => {
+    //     Axios
+    //         .get('http://127.0.0.1:8000/answer/' + a)
+    //         .then((res) => {
+    //             const data = res.data
+    //             return setAnswer(data)
+    //         })
+    // }
+        
+    // let arr = []
+    
+    // answer.map(el => {
+    //     arr.push(el)
+    //     console.log(arr)
+    // })
+    
+    // arr.map(el => {
+    //     console.log(el.id_answer)
+    // })
 
-    const params = {count}
-    const fetchData = async () => {
-        Axios
-            .get('http://127.0.0.1:8000/answer/', 
-            {params})
-            .then((res) => {
-                const data = res.data
-                return setAnswer(data)
-            })
-    }
+    // arr.map(el => {
+    //     console.log(el.answer)
+    // })
+    
+    // arr.map(el => {
+    //     console.log(el.is_correct)
+    //     console.log(el.question.id_questions)
+    // })
 
-    const test = () => {
-        return setCount(2)
-    }
+
     
     return (
-        <React.Fragment>
+        <div>
+            <p>{otherAnswer}</p>
+            {/* <p>{answerID}</p>
+            <p>{answerQuestion}</p> */}
+            {/* <p>Ciao</p>
             {
-                answer.map((el) => {
-                    test()
+                arr.map(el => {
                     return (
-                        <p>{el}</p>
+                        <>
+                            <p>{otherAnswer}</p>
+                        </>
                     )
                 })
-            }
-        </React.Fragment>
-        )
-    }
+            } */}
+        </div>
+    )
+}
     
 export default Answer
