@@ -42,43 +42,50 @@ const ButtonStart = () => {
         ln.push(el.last_name)
     })
 
+    let fnIndex = []
+    let lnIndex = []
+
     let data = []
 
-    user.map((el) => {
-        if (el === username) {
+    user.map((el, index) => {
+        if (fn) {
+            fn.map((el, otherIndex) => {
+                otherIndex = otherIndex + 1
+                if (fnIndex.length === 10) {
+                    return 
+                } else {
+                    fnIndex.push(otherIndex)
+                }
+            })
+        }
+        if (user[index] === username) {
             data.push(username)
-        }
+            if ((user.indexOf(username) + 1) === fnIndex[index]) {
+                data.push(fn[index])
+            }
+        } 
     })
 
-    pass.map((el) => {
-        if (el === password) {
+    pass.map((el, index) => {
+        if (fn) {
+            ln.map((el, index) => {
+                index = index + 1
+                if (lnIndex.length == 10) {
+                    return 
+                } else {
+                    lnIndex.push(index)
+                }
+            })
+        }
+        if (pass[index] === password) {   
             data.push(password)
+            if ((pass.indexOf(password) + 1) === lnIndex[index]) {
+                data.push(ln[index])
+            }
         }
     })
 
-    // fn.map((el) => {
-    //     if (el === firstname) {
-    //         data.push(firstname)
-    //     }
-    // })
-
-    // ln.map((el) => {
-    //     if (el === lastname) {
-    //         data.push(lastname)
-    //     }
-    // })
-
-    // console.log(fn, ln)
-    
-    // console.log(JSON.stringify(users[0]).includes(JSON.stringify('Marco')))
-
-    // console.log(fn)
-
-    // console.log(users[0].first_name)
-
-    console.log(users)
-
-    
+    console.log(data)
 
     return (
         <div>
@@ -91,7 +98,9 @@ const ButtonStart = () => {
             {reveal && (
                 <React.Fragment>
                     {
-                        data[0] === username && data[1] === password ? <InterfaceQuestion username={username} firstname={data[2]} lastname={data[3]} /> : <ErrorValidate />
+                        data[0] === username && data[2] === password ? 
+                            <InterfaceQuestion username={username} firstname={data[1]} lastname={data[3]} /> : 
+                        <ErrorValidate />
                     }
                 </React.Fragment>
             )}

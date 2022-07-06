@@ -69,21 +69,8 @@ const InterfaceQuestion = (props) => {
     
     answer.map(el => {
         arr.push(el)
-        // console.log(arr)
     })
-    
-    // arr.map(el => {
-    //     console.log(el.id_answer)
-    // })
 
-    // arr.map(el => {
-    //     console.log(el.answer)
-    // })
-    
-    // arr.map(el => {
-    //     console.log(el.is_correct)
-    //     console.log(el.question.id_questions)
-    // })
 
     const obj = {
         otherAnswer : arr.map((el, index) => {
@@ -104,13 +91,6 @@ const InterfaceQuestion = (props) => {
     })
 
     const ans = obj.score
-
-    // const lastScore = {
-    //     "firstName" : props.firstname,
-    //     "lastName" : props.lastname
-    // }
-
-    // console.log(lastScore)
     
     return (
         <React.Fragment>
@@ -147,14 +127,14 @@ const InterfaceQuestion = (props) => {
                         textExample.length !== 0 ? 
                             textExample.length === 10 ? 
                                 `Il punteggio di ${props.username} e\' stato di ${isCorrect.length} punti su ${textExample.length} in data ${new Date().toLocaleDateString()}` : 
-                                textExample.slice(-1)[0] === 1 ? 
-                                    <span className='score'>Corretta</span> : 
+                            textExample.slice(-1)[0] === 1 ? 
+                                <span className='score'>Corretta</span> : 
                             <span className='score'>Non corretta</span> : 
                         <span className='score'>Inserisci una risposta</span>
                     }
                 </span>
                 {
-                    textExample.length === 10 ? hideElement() : console.log('Qualcosa e andato storto')
+                    textExample.length === 10 ? hideElement() : console.log('textExample non e\' ancora arrivata a 10: ', textExample.length)
                 }
             </motion.div>
             
