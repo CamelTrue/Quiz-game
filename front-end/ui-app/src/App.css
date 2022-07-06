@@ -187,18 +187,105 @@ input[type=radio] {
     width: 30px;
 }
 
-.color {
+.title-question {
+    margin-top: 10vh;
+    height: 70px;
+    width: 70vw;
+    background-color: #4003CA;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
 }
 
-.color:after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: var(--acqua-marine);
-}
-
-.color:hover {
+.color {
+    position: relative;
+    color: #fff;
+    width: 20vw;
+    height: 50px;
+    border: 1px solid var(--acqua-marine);
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.4s;
-    color: var(--acqua-marine) !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.color::after {
+    content: '+';
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    visibility: hidden;
+    text-transform: lowercase;
+    color: #000;
+    height: 100%;
+    width: 0%;
+    background-color: var(--acqua-marine);
+    position: absolute;
+    left: 0;
+    transition: 0.4s;
+}
+
+
+
+
+.regular {
+    content: '+';
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    visibility: hidden;
+    text-transform: lowercase;
+    color: #000;
+    height: 100%;
+    width: 0%;
+    background-color: var(--acqua-marine);
+    position: absolute;
+    left: 0;
+    transition: 0.4s;
+}
+
+.color:hover::after {
+    width: 20%;
+    opacity: 100%;
+    visibility: visible;
+}
+
+
+
+
+
+.interface-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 30vh;
+    background-color: var(--background-2);
+    position: absolute;
+    right: 4.7vw;
+    top: 65vh;
+    padding: 0 40px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.score {
+    background-color: var(--background-2);
+    letter-spacing: 5px;
+    color: #fff;
+    font-size: 20px;
 }
